@@ -1,0 +1,141 @@
+{
+  "bank_name": "EIB Bank",
+  "audit_period": "2024",
+  "report_date": "2026-01-16T16:51:14.100752",
+  "executive_summary": {
+    "overall_status": "LOW_RISK",
+    "key_findings": [],
+    "critical_issues": [],
+    "strengths": [
+      "Strong credit quality (Score: 7.3)"
+    ]
+  },
+  "risk_assessments": {
+    "credit_risk": {
+      "risk_score": 7.280944115578784,
+      "risk_level": "MINIMAL",
+      "indicators": {},
+      "key_metrics": [],
+      "regulatory_narrative": "Credit Risk Assessment: CRITICAL (score: 7.28). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+      "ml_explanation": {
+        "key_factors": [],
+        "narrative": "Credit Risk Assessment: CRITICAL (score: 7.28). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+        "model_insights": {
+          "isolation_forest": {
+            "verdict": "ANOMALY DETECTED"
+          },
+          "elliptic_envelope": {
+            "verdict": "ANOMALY DETECTED"
+          }
+        },
+        "metric_deviations": {}
+      }
+    },
+    "liquidity_risk": {
+      "risk_score": 67.69463830920442,
+      "risk_level": "HIGH",
+      "indicators": {},
+      "key_metrics": [],
+      "regulatory_narrative": "Liquidity Risk Assessment: CRITICAL (score: 67.69). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+      "ml_explanation": {
+        "key_factors": [],
+        "narrative": "Liquidity Risk Assessment: CRITICAL (score: 67.69). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+        "stress_indicators": {
+          "ml_stress_detected": true,
+          "stress_probability": 1.0
+        },
+        "metric_deviations": {}
+      }
+    },
+    "anomaly_detection": {
+      "total_anomalies": 0,
+      "anomaly_rate": 0.0,
+      "anomalies": [],
+      "severity_distribution": {},
+      "explained_anomalies": []
+    }
+  },
+  "time_series_analysis": {
+    "status": "No data"
+  },
+  "recommendations": [
+    {
+      "priority": "LOW",
+      "category": "General",
+      "description": "Continue monitoring key risk indicators",
+      "action": "Maintain current risk management practices",
+      "timeline": "Ongoing"
+    }
+  ],
+  "overall_risk_score": {
+    "overall_score": 26.605501054453057,
+    "base_score": 26.605501054453057,
+    "risk_level": "MINIMAL",
+    "early_warning": {
+      "count": 0,
+      "adjustment": 0.0,
+      "applied": false
+    },
+    "component_scores": {
+      "credit": 7.280944115578784,
+      "liquidity": 67.69463830920442,
+      "anomaly": 0.0
+    }
+  },
+  "expert_rules_violations": [
+    {
+      "rule": "Capital Adequacy",
+      "metric": "capital_adequacy_ratio",
+      "value": 0.04305739864762704,
+      "threshold": 0.105,
+      "severity": "CRITICAL",
+      "message": "CAR (4.31%) below minimum requirement (10.50%)"
+    }
+  ],
+  "high_risk_periods": [
+    {
+      "period": "2022-03-31",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.020223994600371914,
+      "liquidity_ratio": 0.1549033798994138,
+      "capital_adequacy_ratio": 0.06978759306200459
+    },
+    {
+      "period": "2022-06-30",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.01637721174474175,
+      "liquidity_ratio": 0.16631505702572633,
+      "capital_adequacy_ratio": 0.06197774205542974
+    },
+    {
+      "period": "2022-09-30",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.023137628050608008,
+      "liquidity_ratio": 0.17940235234600702,
+      "capital_adequacy_ratio": 0.04684757101837892
+    },
+    {
+      "period": "2022-12-31",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.024058349219807446,
+      "liquidity_ratio": 0.17620046913067552,
+      "capital_adequacy_ratio": 0.04305739864762704
+    }
+  ]
+}

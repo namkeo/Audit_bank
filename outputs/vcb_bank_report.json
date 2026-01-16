@@ -1,0 +1,152 @@
+{
+  "bank_name": "VCB Bank",
+  "audit_period": "2024",
+  "report_date": "2026-01-16T16:51:05.791731",
+  "executive_summary": {
+    "overall_status": "LOW_RISK",
+    "key_findings": [],
+    "critical_issues": [],
+    "strengths": [
+      "Strong credit quality (Score: 8.9)"
+    ]
+  },
+  "risk_assessments": {
+    "credit_risk": {
+      "risk_score": 8.908796238887327,
+      "risk_level": "MINIMAL",
+      "indicators": {},
+      "key_metrics": [],
+      "regulatory_narrative": "Credit Risk Assessment: CRITICAL (score: 8.91). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+      "ml_explanation": {
+        "key_factors": [],
+        "narrative": "Credit Risk Assessment: CRITICAL (score: 8.91). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+        "model_insights": {
+          "isolation_forest": {
+            "verdict": "ANOMALY DETECTED"
+          },
+          "elliptic_envelope": {
+            "verdict": "ANOMALY DETECTED"
+          }
+        },
+        "metric_deviations": {}
+      }
+    },
+    "liquidity_risk": {
+      "risk_score": 69.72854246142022,
+      "risk_level": "HIGH",
+      "indicators": {},
+      "key_metrics": [],
+      "regulatory_narrative": "Liquidity Risk Assessment: CRITICAL (score: 69.73). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+      "ml_explanation": {
+        "key_factors": [],
+        "narrative": "Liquidity Risk Assessment: CRITICAL (score: 69.73). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+        "stress_indicators": {
+          "ml_stress_detected": true,
+          "stress_probability": 1.0
+        },
+        "metric_deviations": {}
+      }
+    },
+    "anomaly_detection": {
+      "total_anomalies": 0,
+      "anomaly_rate": 0.0,
+      "anomalies": [],
+      "severity_distribution": {},
+      "explained_anomalies": []
+    }
+  },
+  "time_series_analysis": {
+    "status": "No data"
+  },
+  "recommendations": [
+    {
+      "priority": "LOW",
+      "category": "General",
+      "description": "Continue monitoring key risk indicators",
+      "action": "Maintain current risk management practices",
+      "timeline": "Ongoing"
+    }
+  ],
+  "overall_risk_score": {
+    "overall_score": 27.968508357052006,
+    "base_score": 27.968508357052006,
+    "risk_level": "MINIMAL",
+    "early_warning": {
+      "count": 0,
+      "adjustment": 0.0,
+      "applied": false
+    },
+    "component_scores": {
+      "credit": 8.908796238887327,
+      "liquidity": 69.72854246142022,
+      "anomaly": 0.0
+    }
+  },
+  "expert_rules_violations": [
+    {
+      "rule": "Capital Adequacy",
+      "metric": "capital_adequacy_ratio",
+      "value": 0.03735888416026555,
+      "threshold": 0.105,
+      "severity": "CRITICAL",
+      "message": "CAR (3.74%) below minimum requirement (10.50%)"
+    }
+  ],
+  "high_risk_periods": [
+    {
+      "period": "2021-12-31",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.01973437044054105,
+      "liquidity_ratio": 0.14759511477098874,
+      "capital_adequacy_ratio": 0.07580888747995017
+    },
+    {
+      "period": "2022-03-31",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.02344798572930765,
+      "liquidity_ratio": 0.174305399600014,
+      "capital_adequacy_ratio": 0.06586601236875665
+    },
+    {
+      "period": "2022-06-30",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.019911014918433386,
+      "liquidity_ratio": 0.17272956564747605,
+      "capital_adequacy_ratio": 0.05274132831371197
+    },
+    {
+      "period": "2022-09-30",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.02134806026096507,
+      "liquidity_ratio": 0.16092052939107523,
+      "capital_adequacy_ratio": 0.0462995229585145
+    },
+    {
+      "period": "2022-12-31",
+      "risk_indicators": [
+        "Low Liquidity",
+        "Low Capital"
+      ],
+      "severity": "HIGH",
+      "npl_ratio": 0.018634719209253206,
+      "liquidity_ratio": 0.15077881220792097,
+      "capital_adequacy_ratio": 0.03735888416026555
+    }
+  ]
+}

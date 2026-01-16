@@ -1,0 +1,54 @@
+{
+  "capital_adequacy": {
+    "min_car": 0.105,
+    "target_car": 0.125,
+    "severity": "CRITICAL"
+  },
+  "asset_quality": {
+    "max_npl_ratio": 0.03,
+    "min_coverage_ratio": 0.70,
+    "severity": "HIGH"
+  },
+  "liquidity": {
+    "min_lcr": 1.0,
+    "min_nsfr": 1.0,
+    "liquidity_ratio_min": 0.30,
+    "survival_days_min": 30,
+    "max_loan_to_deposit": 0.85,
+    "max_loan_to_total_funding": 0.90,
+    "max_wholesale_dependency": 0.50,
+    "severity": "HIGH"
+  },
+  "profitability": {
+    "min_roa": 0.005,
+    "min_roe": 0.08,
+    "min_net_interest_margin": 0.015,
+    "severity": "MEDIUM"
+  },
+  "growth_limits": {
+    "max_loan_growth": 0.30,
+    "max_asset_growth": 0.25,
+    "severity": "MEDIUM"
+  },
+  "concentration_limits": {
+    "max_top20_depositors_ratio": 0.50,
+    "max_top5_depositors_ratio": 0.30,
+    "max_sector_hhi": 0.35,
+    "max_top20_borrower_concentration": 0.25,
+    "max_geographic_concentration": 0.75,
+    "severity": "HIGH"
+  },
+  "off_balance_sheet": {
+    "max_derivatives_to_assets": 2.0,
+    "max_unused_lines_to_loans": 0.80,
+    "max_obs_to_assets": 1.5,
+    "severity": "MEDIUM"
+  },
+  "composite_risks": {
+    "max_liquidity_concentration_risk": 0.60,
+    "max_credit_concentration_risk": 0.50,
+    "max_obs_risk_indicator": 0.70,
+    "severity": "HIGH"
+  }
+}
+

@@ -1,0 +1,36 @@
+2026-01-08 16:55:21 - temp_module - INFO - [load_time_series_data:87] - Loading time series data for bank: TEST_BANK
+2026-01-08 16:55:21 - temp_module - INFO - [load_time_series_data:87] - Loading time series data for bank: TEST_BANK
+2026-01-08 16:55:21 - temp_module - INFO - [load_time_series_data:87] - Loading time series data for bank: TEST_BANK
+2026-01-08 16:55:21 - temp_module - INFO - [load_time_series_data:104] - Found 3 records for bank TEST_BANK
+2026-01-08 16:55:21 - temp_module - INFO - [load_time_series_data:126] - Successfully loaded time series data with 3 periods
+2026-01-08 16:55:21 - temp_module - INFO - [calculate_time_series_ratios:157] - Calculating time series ratios for bank TEST_BANK
+2026-01-08 16:55:21 - temp_module - INFO - [calculate_time_series_ratios:176] - Successfully calculated ratios for 3 periods
+2026-01-08 16:55:21 - temp_module - INFO - [validate_data_quality:492] - Validating data quality for 3 records
+2026-01-08 16:55:21 - temp_module - WARNING - [validate_data_quality:510] - High missing rate (33.3%) in critical column: net_income
+2026-01-08 16:55:21 - temp_module - WARNING - [validate_data_quality:519] - Negative values found in total_assets
+2026-01-08 16:55:21 - temp_module - INFO - [validate_data_quality:521] - Data quality validation complete. Found 2 issues
+2026-01-08 17:04:08 - temp_module - INFO - [__init__:103] - Initialized Credit Risk Model in state: uninitialized
+2026-01-08 17:05:59 - temp_module - INFO - [__init__:103] - Initialized Credit Risk Model in state: uninitialized
+2026-01-08 17:06:28 - temp_module - INFO - [__init__:103] - Initialized Credit Risk Model in state: uninitialized
+2026-01-08 17:06:28 - temp_module - INFO - [__init__:103] - Initialized Credit Risk Model in state: uninitialized
+2026-01-08 17:07:09 - temp_module - INFO - [__init__:103] - Initialized Credit Risk Model in state: uninitialized
+2026-01-08 17:16:41 - bank_audit_system - INFO - [__init__:63] - Initializing Bank Audit System for VCB Bank - Period: 2024-Q1
+2026-01-08 17:16:41 - temp_module - INFO - [__init__:103] - Initialized Credit Risk Model in state: uninitialized
+2026-01-08 17:16:41 - temp_module - INFO - [__init__:103] - Initialized Liquidity Risk Model in state: uninitialized
+2026-01-08 17:16:41 - bank_audit_system - INFO - [load_and_prepare_data:128] - Loading data for bank VCB
+2026-01-08 17:16:41 - temp_module - INFO - [load_time_series_data:87] - Loading time series data for bank: VCB
+2026-01-08 17:16:41 - temp_module - INFO - [load_time_series_data:104] - Found 20 records for bank VCB
+2026-01-08 17:16:41 - temp_module - INFO - [load_time_series_data:126] - Successfully loaded time series data with 20 periods
+2026-01-08 17:16:41 - bank_audit_system - INFO - [load_and_prepare_data:134] - Calculating financial ratios
+2026-01-08 17:16:41 - temp_module - INFO - [calculate_time_series_ratios:157] - Calculating time series ratios for bank VCB
+2026-01-08 17:16:41 - temp_module - INFO - [calculate_time_series_ratios:176] - Successfully calculated ratios for 20 periods
+2026-01-08 17:16:41 - bank_audit_system - INFO - [load_and_prepare_data:138] - Preparing features for modeling
+2026-01-08 17:16:41 - temp_module - INFO - [prepare_time_series_features:299] - Preparing time series features for bank VCB
+2026-01-08 17:16:41 - temp_module - INFO - [calculate_time_series_ratios:157] - Calculating time series ratios for bank VCB
+2026-01-08 17:16:41 - temp_module - INFO - [calculate_time_series_ratios:176] - Successfully calculated ratios for 20 periods
+2026-01-08 17:16:41 - temp_module - INFO - [calculate_growth_rates:205] - Calculating growth rates for bank VCB
+2026-01-08 17:16:41 - temp_module - INFO - [calculate_growth_rates:216] - Successfully calculated growth rates for 26 metrics
+2026-01-08 17:16:41 - temp_module - INFO - [prepare_time_series_features:320] - Successfully prepared 201 features
+2026-01-08 17:16:41 - bank_audit_system - INFO - [load_and_prepare_data:146] - Data preparation complete for VCB
+2026-01-08 17:16:41 - bank_audit_system - INFO - [train_models:165] - Training risk assessment models
+2026-01-08 17:16:41 - temp_module - INFO - [_mark_as_trained:123] - Credit Risk Model state changed to: trained
