@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Generated files (keep only latest)
+outputs/acb_bank_dashboard.png
+outputs/bidv_bank_dashboard.png
+outputs/ctg_bank_dashboard.png
+outputs/eib_bank_dashboard.png
+outputs/hdb_bank_dashboard.png
+outputs/mbb_bank_dashboard.png
+outputs/stb_bank_dashboard.png
+outputs/tcb_bank_dashboard.png
+outputs/vcb_bank_dashboard.png
+outputs/vpb_bank_dashboard.png
+outputs/*_bank_report.json
+outputs/all_banks_summary.csv
+outputs/banks_components_analysis.xlsx
+
+# Keep quarterly results
+!outputs/quarterly_*.xlsx
+!outputs/quarterly_*.csv
