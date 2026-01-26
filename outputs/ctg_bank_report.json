@@ -1,25 +1,29 @@
 {
   "bank_name": "CTG Bank",
   "audit_period": "2024",
-  "report_date": "2026-01-16T17:03:34.142944",
+  "report_date": "2026-01-26T15:19:19.482790",
   "executive_summary": {
-    "overall_status": "LOW_RISK",
-    "key_findings": [],
-    "critical_issues": [],
+    "overall_status": "HIGH_RISK",
+    "key_findings": [
+      "4 anomalies detected requiring investigation"
+    ],
+    "critical_issues": [
+      "High liquidity risk detected (Score: 77.9)"
+    ],
     "strengths": [
-      "Strong credit quality (Score: 11.8)"
+      "Strong credit quality (Score: 11.9)"
     ]
   },
   "risk_assessments": {
     "credit_risk": {
-      "risk_score": 11.844407723897529,
+      "risk_score": 11.91600518997761,
       "risk_level": "MINIMAL",
       "indicators": {},
       "key_metrics": [],
-      "regulatory_narrative": "Credit Risk Assessment: CRITICAL (score: 11.84). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+      "regulatory_narrative": "Credit Risk Assessment: CRITICAL (score: 11.92). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
       "ml_explanation": {
         "key_factors": [],
-        "narrative": "Credit Risk Assessment: CRITICAL (score: 11.84). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+        "narrative": "Credit Risk Assessment: CRITICAL (score: 11.92). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
         "model_insights": {
           "isolation_forest": {
             "verdict": "ANOMALY DETECTED"
@@ -32,14 +36,14 @@
       }
     },
     "liquidity_risk": {
-      "risk_score": 68.23209632168373,
-      "risk_level": "HIGH",
+      "risk_score": 77.9118849767642,
+      "risk_level": "CRITICAL",
       "indicators": {},
       "key_metrics": [],
-      "regulatory_narrative": "Liquidity Risk Assessment: CRITICAL (score: 68.23). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+      "regulatory_narrative": "Liquidity Risk Assessment: CRITICAL (score: 77.91). ML models detected liquidity stress patterns (stress probability: 100.0%).",
       "ml_explanation": {
         "key_factors": [],
-        "narrative": "Liquidity Risk Assessment: CRITICAL (score: 68.23). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+        "narrative": "Liquidity Risk Assessment: CRITICAL (score: 77.91). ML models detected liquidity stress patterns (stress probability: 100.0%).",
         "stress_indicators": {
           "ml_stress_detected": true,
           "stress_probability": 1.0
@@ -48,11 +52,487 @@
       }
     },
     "anomaly_detection": {
-      "total_anomalies": 0,
-      "anomaly_rate": 0.0,
-      "anomalies": [],
-      "severity_distribution": {},
-      "explained_anomalies": []
+      "total_anomalies": 4,
+      "anomaly_rate": 0.2,
+      "anomalies": [
+        {
+          "index": 16,
+          "anomaly_score": 0.6666666666666666,
+          "severity": "MEDIUM",
+          "red_flag_count": 0,
+          "models_voting_anomaly": 2,
+          "data": {
+            "bank_id": "CTG",
+            "period": "3/31/2022",
+            "total_assets": 158112.7282,
+            "total_loans": 139764.0813,
+            "non_performing_loans": 2947.948755,
+            "loan_loss_provisions": 1778.990584,
+            "loan_loss_reserves": 2208.333473,
+            "high_quality_liquid_assets": 23832.60159,
+            "net_cash_outflows_30d": 17099.16302,
+            "total_deposits": 143342.1446,
+            "number_of_employees": 3391,
+            "total_equity": 6092.916621,
+            "tier1_capital": 4662.645213,
+            "tier2_capital": 1285.733996,
+            "risk_weighted_assets": 110161.9157,
+            "operating_expenses": 2338.483159,
+            "operating_income": 3874.36509,
+            "net_income": 1535.881931,
+            "bank_type": "large",
+            "stability": "medium",
+            "region": "south",
+            "loan_growth_rate": 0.1011417,
+            "asset_growth_rate": 0.118623418,
+            "deposit_growth_rate": 0.131371438,
+            "capital_adequacy_ratio": 0.053996694,
+            "npl_ratio": 0.02109232,
+            "liquidity_coverage_ratio": 1.393787612,
+            "loan_to_deposit_ratio": 0.975038302,
+            "return_on_assets": 0.009713841,
+            "return_on_equity": 0.252076637,
+            "provision_coverage_ratio": 0.603467269,
+            "sector_loans_energy": 17208.67941,
+            "sector_loans_real_estate": 6276.915422,
+            "sector_loans_construction": 24572.3192,
+            "sector_loans_services": 10668.52691,
+            "sector_loans_agriculture": 81037.6403,
+            "top1_borrower_loans": 15551.42679,
+            "top10_borrower_loans": 36005.73736,
+            "obs_exposure_total": 68493.99627,
+            "external_credit_rating": "BBB",
+            "nsfr": 1.067606164,
+            "wholesale_funding_short_term": 28856.47904,
+            "wholesale_funding_stable": 37139.13605,
+            "loan_to_total_funding_ratio": 0.774396551,
+            "wholesale_dependency_ratio": 0.315259011,
+            "interest_income": 2600.452443,
+            "interest_expense": 1441.527777,
+            "net_interest_margin": 0.015,
+            "derivatives_notional": 407170.6242,
+            "unused_credit_lines": 56381.68202,
+            "guarantees_issued": 24930.78006,
+            "derivatives_to_assets_ratio": 2.575191946,
+            "unused_lines_to_loans_ratio": 0.403406093,
+            "guarantees_to_loans_ratio": 0.178377591,
+            "obs_to_assets_ratio": 0.433197232,
+            "top20_depositors": 41112.20866,
+            "top20_depositors_ratio": 0.286811731,
+            "top5_depositors": 20697.43403,
+            "top5_depositors_ratio": 0.144391826,
+            "sector_concentration_hhi": 0.3901021,
+            "top20_borrower_loans": 60497.19603,
+            "top20_borrower_concentration": 0.432852243,
+            "geographic_concentration": 1.0,
+            "liquidity_concentration_risk": 0.300234254,
+            "credit_concentration_risk": 0.524906723,
+            "obs_risk_indicator": 0.593540209
+          },
+          "explanation": {
+            "top_factors": [],
+            "narrative": "Models flagging anomaly: dbscan, elliptic_envelope (consensus: 66.7%).",
+            "model_consensus": {
+              "models_flagging": [
+                "dbscan",
+                "elliptic_envelope"
+              ],
+              "consensus_strength": 0.6666666666666666
+            },
+            "deviation_details": {},
+            "peer_group": 1
+          },
+          "contributing_factors": [],
+          "regulatory_narrative": "Models flagging anomaly: dbscan, elliptic_envelope (consensus: 66.7%)."
+        },
+        {
+          "index": 17,
+          "anomaly_score": 1.0,
+          "severity": "CRITICAL",
+          "red_flag_count": 0,
+          "models_voting_anomaly": 3,
+          "data": {
+            "bank_id": "CTG",
+            "period": "6/30/2022",
+            "total_assets": 200154.3431,
+            "total_loans": 175381.9407,
+            "non_performing_loans": 3479.967201,
+            "loan_loss_provisions": 2603.467752,
+            "loan_loss_reserves": 2516.551109,
+            "high_quality_liquid_assets": 30977.43099,
+            "net_cash_outflows_30d": 20970.78368,
+            "total_deposits": 183431.0589,
+            "number_of_employees": 3686,
+            "total_equity": 6310.368166,
+            "tier1_capital": 4808.695586,
+            "tier2_capital": 1175.281485,
+            "risk_weighted_assets": 143133.9848,
+            "operating_expenses": 2759.119472,
+            "operating_income": 4725.616182,
+            "net_income": 1966.49671,
+            "bank_type": "large",
+            "stability": "medium",
+            "region": "south",
+            "loan_growth_rate": 0.254842726,
+            "asset_growth_rate": 0.265896461,
+            "deposit_growth_rate": 0.279672907,
+            "capital_adequacy_ratio": 0.041806822,
+            "npl_ratio": 0.019842221,
+            "liquidity_coverage_ratio": 1.47717088,
+            "loan_to_deposit_ratio": 0.95611911,
+            "return_on_assets": 0.009824902,
+            "return_on_equity": 0.311629474,
+            "provision_coverage_ratio": 0.748129968,
+            "sector_loans_energy": 21594.18619,
+            "sector_loans_real_estate": 7876.54166,
+            "sector_loans_construction": 30834.39602,
+            "sector_loans_services": 13387.32339,
+            "sector_loans_agriculture": 101689.4935,
+            "top1_borrower_loans": 19514.59479,
+            "top10_borrower_loans": 45181.53762,
+            "obs_exposure_total": 99713.33154,
+            "external_credit_rating": "BBB",
+            "nsfr": 1.067606164,
+            "wholesale_funding_short_term": 36453.2218,
+            "wholesale_funding_stable": 46916.36711,
+            "loan_to_total_funding_ratio": 0.761380076,
+            "wholesale_dependency_ratio": 0.31247896,
+            "interest_income": 3207.364546,
+            "interest_expense": 1757.331558,
+            "net_interest_margin": 0.015,
+            "derivatives_notional": 523353.4468,
+            "unused_credit_lines": 94811.16017,
+            "guarantees_issued": 32675.09889,
+            "derivatives_to_assets_ratio": 2.614749391,
+            "unused_lines_to_loans_ratio": 0.540598193,
+            "guarantees_to_loans_ratio": 0.18630823,
+            "obs_to_assets_ratio": 0.498182203,
+            "top20_depositors": 50851.39302,
+            "top20_depositors_ratio": 0.277223461,
+            "top5_depositors": 21885.73693,
+            "top5_depositors_ratio": 0.119313147,
+            "sector_concentration_hhi": 0.3901021,
+            "top20_borrower_loans": 81174.8592,
+            "top20_borrower_concentration": 0.462846168,
+            "geographic_concentration": 1.0,
+            "liquidity_concentration_risk": 0.28305744,
+            "credit_concentration_risk": 0.5339049,
+            "obs_risk_indicator": 0.647789243
+          },
+          "explanation": {
+            "top_factors": [
+              {
+                "feature": "deposit_growth_rate",
+                "value": 0.279672907,
+                "peer_mean": 0.07239996465,
+                "peer_median": 0.0496863535,
+                "z_score": 2.170453288608157,
+                "pct_deviation": 286.2887341893199,
+                "severity": "notable"
+              }
+            ],
+            "narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%). Key outliers identified: Deposit Growth Rate: 0.2797 vs peer average 0.0724 (above by 286.3%, z-score: 2.17).",
+            "model_consensus": {
+              "models_flagging": [
+                "isolation_forest",
+                "dbscan",
+                "elliptic_envelope"
+              ],
+              "consensus_strength": 1.0
+            },
+            "deviation_details": {
+              "deposit_growth_rate": {
+                "feature": "deposit_growth_rate",
+                "value": 0.279672907,
+                "peer_mean": 0.07239996465,
+                "peer_median": 0.0496863535,
+                "z_score": 2.170453288608157,
+                "pct_deviation": 286.2887341893199,
+                "severity": "notable"
+              }
+            },
+            "peer_group": 1
+          },
+          "contributing_factors": [
+            {
+              "feature": "deposit_growth_rate",
+              "value": 0.279672907,
+              "peer_mean": 0.07239996465,
+              "peer_median": 0.0496863535,
+              "z_score": 2.170453288608157,
+              "pct_deviation": 286.2887341893199,
+              "severity": "notable"
+            }
+          ],
+          "regulatory_narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%). Key outliers identified: Deposit Growth Rate: 0.2797 vs peer average 0.0724 (above by 286.3%, z-score: 2.17)."
+        },
+        {
+          "index": 18,
+          "anomaly_score": 1.0,
+          "severity": "CRITICAL",
+          "red_flag_count": 0,
+          "models_voting_anomaly": 3,
+          "data": {
+            "bank_id": "CTG",
+            "period": "9/30/2022",
+            "total_assets": 238739.1654,
+            "total_loans": 213858.2791,
+            "non_performing_loans": 3704.823289,
+            "loan_loss_provisions": 2378.797992,
+            "loan_loss_reserves": 3198.795298,
+            "high_quality_liquid_assets": 38175.96726,
+            "net_cash_outflows_30d": 26047.89575,
+            "total_deposits": 219320.7767,
+            "number_of_employees": 4309,
+            "total_equity": 6461.774639,
+            "tier1_capital": 5036.654638,
+            "tier2_capital": 1349.804481,
+            "risk_weighted_assets": 173061.7233,
+            "operating_expenses": 3592.273731,
+            "operating_income": 6169.121662,
+            "net_income": 2576.847931,
+            "bank_type": "large",
+            "stability": "medium",
+            "region": "south",
+            "loan_growth_rate": 0.219385976,
+            "asset_growth_rate": 0.192775344,
+            "deposit_growth_rate": 0.195657802,
+            "capital_adequacy_ratio": 0.036902782,
+            "npl_ratio": 0.017323731,
+            "liquidity_coverage_ratio": 1.465606574,
+            "loan_to_deposit_ratio": 0.975093569,
+            "return_on_assets": 0.01079357,
+            "return_on_equity": 0.398783318,
+            "provision_coverage_ratio": 0.642081364,
+            "sector_loans_energy": 26331.64781,
+            "sector_loans_real_estate": 9604.544443,
+            "sector_loans_construction": 37599.03009,
+            "sector_loans_services": 16324.31441,
+            "sector_loans_agriculture": 123998.7423,
+            "top1_borrower_loans": 23795.82323,
+            "top10_borrower_loans": 55093.73337,
+            "obs_exposure_total": 112697.5163,
+            "external_credit_rating": "BBB",
+            "nsfr": 1.067606164,
+            "wholesale_funding_short_term": 44153.53591,
+            "wholesale_funding_stable": 56826.89752,
+            "loan_to_total_funding_ratio": 0.774434475,
+            "wholesale_dependency_ratio": 0.315267099,
+            "interest_income": 4121.996791,
+            "interest_expense": 2295.337058,
+            "net_interest_margin": 0.015,
+            "derivatives_notional": 628118.9759,
+            "unused_credit_lines": 89155.58812,
+            "guarantees_issued": 45892.21682,
+            "derivatives_to_assets_ratio": 2.630984216,
+            "unused_lines_to_loans_ratio": 0.416890983,
+            "guarantees_to_loans_ratio": 0.214591724,
+            "obs_to_assets_ratio": 0.472052904,
+            "top20_depositors": 58662.4197,
+            "top20_depositors_ratio": 0.267473153,
+            "top5_depositors": 26161.9799,
+            "top5_depositors_ratio": 0.119286373,
+            "sector_concentration_hhi": 0.3901021,
+            "top20_borrower_loans": 89564.97742,
+            "top20_borrower_concentration": 0.418805285,
+            "geographic_concentration": 0.971567515,
+            "liquidity_concentration_risk": 0.281728405,
+            "credit_concentration_risk": 0.515006138,
+            "obs_risk_indicator": 0.610769954
+          },
+          "explanation": {
+            "top_factors": [],
+            "narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%).",
+            "model_consensus": {
+              "models_flagging": [
+                "isolation_forest",
+                "dbscan",
+                "elliptic_envelope"
+              ],
+              "consensus_strength": 1.0
+            },
+            "deviation_details": {},
+            "peer_group": 1
+          },
+          "contributing_factors": [],
+          "regulatory_narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%)."
+        },
+        {
+          "index": 19,
+          "anomaly_score": 1.0,
+          "severity": "CRITICAL",
+          "red_flag_count": 0,
+          "models_voting_anomaly": 3,
+          "data": {
+            "bank_id": "CTG",
+            "period": "12/31/2022",
+            "total_assets": 257896.0788,
+            "total_loans": 227109.5781,
+            "non_performing_loans": 4848.858855,
+            "loan_loss_provisions": 3079.305731,
+            "loan_loss_reserves": 3975.403969,
+            "high_quality_liquid_assets": 37460.57128,
+            "net_cash_outflows_30d": 27716.67126,
+            "total_deposits": 236665.8872,
+            "number_of_employees": 5064,
+            "total_equity": 6247.506602,
+            "tier1_capital": 4958.733231,
+            "tier2_capital": 1347.630085,
+            "risk_weighted_assets": 186257.9767,
+            "operating_expenses": 3809.450211,
+            "operating_income": 6292.26769,
+            "net_income": 2482.817479,
+            "bank_type": "large",
+            "stability": "medium",
+            "region": "south",
+            "loan_growth_rate": 0.061962993,
+            "asset_growth_rate": 0.080242022,
+            "deposit_growth_rate": 0.079085578,
+            "capital_adequacy_ratio": 0.033858219,
+            "npl_ratio": 0.021350305,
+            "liquidity_coverage_ratio": 1.351553761,
+            "loan_to_deposit_ratio": 0.959621096,
+            "return_on_assets": 0.009627201,
+            "return_on_equity": 0.397409341,
+            "provision_coverage_ratio": 0.635057819,
+            "sector_loans_energy": 27963.23552,
+            "sector_loans_real_estate": 10199.67076,
+            "sector_loans_construction": 39928.77853,
+            "sector_loans_services": 17335.81779,
+            "sector_loans_agriculture": 131682.0755,
+            "top1_borrower_loans": 25270.28366,
+            "top10_borrower_loans": 58507.50599,
+            "obs_exposure_total": 117793.9479,
+            "external_credit_rating": "BBB",
+            "nsfr": 1.067606164,
+            "wholesale_funding_short_term": 47145.68376,
+            "wholesale_funding_stable": 60677.87969,
+            "loan_to_total_funding_ratio": 0.763794649,
+            "wholesale_dependency_ratio": 0.312995255,
+            "interest_income": 4327.652601,
+            "interest_expense": 2340.155187,
+            "net_interest_margin": 0.015,
+            "derivatives_notional": 614016.8465,
+            "unused_credit_lines": 98939.2373,
+            "guarantees_issued": 47029.35871,
+            "derivatives_to_assets_ratio": 2.380869261,
+            "unused_lines_to_loans_ratio": 0.435645375,
+            "guarantees_to_loans_ratio": 0.20707783,
+            "obs_to_assets_ratio": 0.456749666,
+            "top20_depositors": 59370.17227,
+            "top20_depositors_ratio": 0.250860709,
+            "top5_depositors": 28230.58178,
+            "top5_depositors_ratio": 0.119284541,
+            "sector_concentration_hhi": 0.3901021,
+            "top20_borrower_loans": 107231.8877,
+            "top20_borrower_concentration": 0.472159248,
+            "geographic_concentration": 1.0,
+            "liquidity_concentration_risk": 0.291509796,
+            "credit_concentration_risk": 0.536698824,
+            "obs_risk_indicator": 0.573180123
+          },
+          "explanation": {
+            "top_factors": [
+              {
+                "feature": "capital_adequacy_ratio",
+                "value": 0.033858219,
+                "peer_mean": 0.09975962275,
+                "peer_median": 0.10424278449999999,
+                "z_score": -2.0445151130198522,
+                "pct_deviation": -66.06019743594109,
+                "severity": "notable"
+              }
+            ],
+            "narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%). Key outliers identified: Capital Adequacy Ratio: 0.0339 vs peer average 0.0998 (below by 66.1%, z-score: -2.04).",
+            "model_consensus": {
+              "models_flagging": [
+                "isolation_forest",
+                "dbscan",
+                "elliptic_envelope"
+              ],
+              "consensus_strength": 1.0
+            },
+            "deviation_details": {
+              "capital_adequacy_ratio": {
+                "feature": "capital_adequacy_ratio",
+                "value": 0.033858219,
+                "peer_mean": 0.09975962275,
+                "peer_median": 0.10424278449999999,
+                "z_score": -2.0445151130198522,
+                "pct_deviation": -66.06019743594109,
+                "severity": "notable"
+              }
+            },
+            "peer_group": 1
+          },
+          "contributing_factors": [
+            {
+              "feature": "capital_adequacy_ratio",
+              "value": 0.033858219,
+              "peer_mean": 0.09975962275,
+              "peer_median": 0.10424278449999999,
+              "z_score": -2.0445151130198522,
+              "pct_deviation": -66.06019743594109,
+              "severity": "notable"
+            }
+          ],
+          "regulatory_narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%). Key outliers identified: Capital Adequacy Ratio: 0.0339 vs peer average 0.0998 (below by 66.1%, z-score: -2.04)."
+        }
+      ],
+      "severity_distribution": {
+        "MEDIUM": 1,
+        "CRITICAL": 3
+      },
+      "explained_anomalies": [
+        {
+          "index": 16,
+          "severity": "MEDIUM",
+          "score": 0.6666666666666666,
+          "regulatory_narrative": "Models flagging anomaly: dbscan, elliptic_envelope (consensus: 66.7%).",
+          "top_factors": []
+        },
+        {
+          "index": 17,
+          "severity": "CRITICAL",
+          "score": 1.0,
+          "regulatory_narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%). Key outliers identified: Deposit Growth Rate: 0.2797 vs peer average 0.0724 (above by 286.3%, z-score: 2.17).",
+          "top_factors": [
+            {
+              "feature": "deposit_growth_rate",
+              "value": 0.279672907,
+              "peer_mean": 0.07239996465,
+              "peer_median": 0.0496863535,
+              "z_score": 2.170453288608157,
+              "pct_deviation": 286.2887341893199,
+              "severity": "notable"
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "severity": "CRITICAL",
+          "score": 1.0,
+          "regulatory_narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%).",
+          "top_factors": []
+        },
+        {
+          "index": 19,
+          "severity": "CRITICAL",
+          "score": 1.0,
+          "regulatory_narrative": "Models flagging anomaly: isolation_forest, dbscan, elliptic_envelope (consensus: 100.0%). Key outliers identified: Capital Adequacy Ratio: 0.0339 vs peer average 0.0998 (below by 66.1%, z-score: -2.04).",
+          "top_factors": [
+            {
+              "feature": "capital_adequacy_ratio",
+              "value": 0.033858219,
+              "peer_mean": 0.09975962275,
+              "peer_median": 0.10424278449999999,
+              "z_score": -2.0445151130198522,
+              "pct_deviation": -66.06019743594109,
+              "severity": "notable"
+            }
+          ]
+        }
+      ]
     }
   },
   "time_series_analysis": {
@@ -60,115 +540,122 @@
   },
   "recommendations": [
     {
-      "priority": "LOW",
-      "category": "General",
-      "description": "Continue monitoring key risk indicators",
-      "action": "Maintain current risk management practices",
-      "timeline": "Ongoing"
+      "priority": "HIGH",
+      "category": "Liquidity Risk",
+      "description": "Liquidity position requires immediate attention",
+      "action": "Increase liquid assets and reduce loan-to-deposit ratio",
+      "timeline": "Immediate"
+    },
+    {
+      "priority": "HIGH",
+      "category": "Anomaly Detection",
+      "description": "3 high-severity anomalies detected",
+      "action": "Conduct detailed investigation of flagged transactions and activities",
+      "timeline": "7 days"
     }
   ],
   "overall_risk_score": {
-    "overall_score": 28.618996802148317,
-    "base_score": 28.618996802148317,
-    "risk_level": "MINIMAL",
+    "overall_score": 37.035561817858515,
+    "base_score": 37.035561817858515,
+    "risk_level": "LOW",
     "early_warning": {
       "count": 0,
       "adjustment": 0.0,
       "applied": false
     },
     "component_scores": {
-      "credit": 11.844407723897529,
-      "liquidity": 68.23209632168373,
-      "anomaly": 0.0
+      "credit": 11.91600518997761,
+      "liquidity": 77.9118849767642,
+      "anomaly": 20.0
     }
   },
   "expert_rules_violations": [
     {
       "rule": "Capital Adequacy",
       "metric": "capital_adequacy_ratio",
-      "value": 0.033858218736115706,
+      "value": 0.03690278241323857,
       "threshold": 0.105,
       "severity": "CRITICAL",
-      "message": "CAR (3.39%) below minimum requirement (10.50%)"
+      "message": "CAR (3.69%) below minimum requirement (10.50%)"
     }
   ],
   "high_risk_periods": [
     {
-      "period": "2021-06-30",
+      "period": "12/31/2021",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.023897464747813447,
-      "liquidity_ratio": 0.16134506598125395,
-      "capital_adequacy_ratio": 0.07862605648992922
+      "npl_ratio": 0.024309377195352422,
+      "liquidity_ratio": 0.18397181594329845,
+      "capital_adequacy_ratio": 0.0637225756637548
     },
     {
-      "period": "2021-09-30",
+      "period": "12/31/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.022435688641412387,
-      "liquidity_ratio": 0.15636737147570823,
-      "capital_adequacy_ratio": 0.06687580863242872
+      "npl_ratio": 0.021350305414529765,
+      "liquidity_ratio": 0.1582846253137575,
+      "capital_adequacy_ratio": 0.033858218733673166
     },
     {
-      "period": "2021-12-31",
+      "period": "3/31/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.02430937719587205,
-      "liquidity_ratio": 0.18397181591907194,
-      "capital_adequacy_ratio": 0.06372257566219017
+      "npl_ratio": 0.02109232019829404,
+      "liquidity_ratio": 0.16626374369174882,
+      "capital_adequacy_ratio": 0.05399669360506591
     },
     {
-      "period": "2022-03-31",
+      "period": "6/30/2021",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.02109232020549243,
-      "liquidity_ratio": 0.16626374370413444,
-      "capital_adequacy_ratio": 0.053996693615320966
+      "npl_ratio": 0.02389746475730238,
+      "liquidity_ratio": 0.16134506592614486,
+      "capital_adequacy_ratio": 0.07862605649505952
     },
     {
-      "period": "2022-06-30",
+      "period": "6/30/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.019842220850568075,
-      "liquidity_ratio": 0.16887778530663886,
-      "capital_adequacy_ratio": 0.04180682233514298
+      "npl_ratio": 0.019842220853016252,
+      "liquidity_ratio": 0.16887778534216377,
+      "capital_adequacy_ratio": 0.041806822323582786
     },
     {
-      "period": "2022-09-30",
+      "period": "9/30/2021",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.017323730953579267,
-      "liquidity_ratio": 0.1740645269817704,
-      "capital_adequacy_ratio": 0.036902782418375656
+      "npl_ratio": 0.022435688647511463,
+      "liquidity_ratio": 0.15636737144278792,
+      "capital_adequacy_ratio": 0.06687580862845778
     },
     {
-      "period": "2022-12-31",
+      "period": "9/30/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.021350305415181667,
-      "liquidity_ratio": 0.15828462534736223,
-      "capital_adequacy_ratio": 0.033858218736115706
+      "npl_ratio": 0.01732373095206488,
+      "liquidity_ratio": 0.1740645270111338,
+      "capital_adequacy_ratio": 0.03690278241323857
     }
   ]
 }

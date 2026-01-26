@@ -1,27 +1,29 @@
 {
   "bank_name": "TCB Bank",
   "audit_period": "2024",
-  "report_date": "2026-01-16T17:03:37.169977",
+  "report_date": "2026-01-26T15:19:22.651184",
   "executive_summary": {
     "overall_status": "HIGH_RISK",
-    "key_findings": [],
+    "key_findings": [
+      "2 anomalies detected requiring investigation"
+    ],
     "critical_issues": [
-      "High liquidity risk detected (Score: 70.2)"
+      "High liquidity risk detected (Score: 85.7)"
     ],
     "strengths": [
-      "Strong credit quality (Score: 7.8)"
+      "Strong credit quality (Score: 8.1)"
     ]
   },
   "risk_assessments": {
     "credit_risk": {
-      "risk_score": 7.768733167298333,
+      "risk_score": 8.090005715684764,
       "risk_level": "MINIMAL",
       "indicators": {},
       "key_metrics": [],
-      "regulatory_narrative": "Credit Risk Assessment: CRITICAL (score: 7.77). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+      "regulatory_narrative": "Credit Risk Assessment: CRITICAL (score: 8.09). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
       "ml_explanation": {
         "key_factors": [],
-        "narrative": "Credit Risk Assessment: CRITICAL (score: 7.77). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+        "narrative": "Credit Risk Assessment: CRITICAL (score: 8.09). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
         "model_insights": {
           "isolation_forest": {
             "verdict": "ANOMALY DETECTED"
@@ -34,14 +36,14 @@
       }
     },
     "liquidity_risk": {
-      "risk_score": 70.18306749632468,
-      "risk_level": "HIGH",
+      "risk_score": 85.65860268285475,
+      "risk_level": "CRITICAL",
       "indicators": {},
       "key_metrics": [],
-      "regulatory_narrative": "Liquidity Risk Assessment: CRITICAL (score: 70.18). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+      "regulatory_narrative": "Liquidity Risk Assessment: CRITICAL (score: 85.66). ML models detected liquidity stress patterns (stress probability: 100.0%).",
       "ml_explanation": {
         "key_factors": [],
-        "narrative": "Liquidity Risk Assessment: CRITICAL (score: 70.18). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+        "narrative": "Liquidity Risk Assessment: CRITICAL (score: 85.66). ML models detected liquidity stress patterns (stress probability: 100.0%).",
         "stress_indicators": {
           "ml_stress_detected": true,
           "stress_probability": 1.0
@@ -50,11 +52,550 @@
       }
     },
     "anomaly_detection": {
-      "total_anomalies": 0,
-      "anomaly_rate": 0.0,
-      "anomalies": [],
-      "severity_distribution": {},
-      "explained_anomalies": []
+      "total_anomalies": 2,
+      "anomaly_rate": 0.1,
+      "anomalies": [
+        {
+          "index": 17,
+          "anomaly_score": 0.6666666666666666,
+          "severity": "MEDIUM",
+          "red_flag_count": 0,
+          "models_voting_anomaly": 2,
+          "data": {
+            "bank_id": "TCB",
+            "period": "6/30/2022",
+            "total_assets": 136353.1647,
+            "total_loans": 98072.30385,
+            "non_performing_loans": 1651.17421,
+            "loan_loss_provisions": 1255.834475,
+            "loan_loss_reserves": 1207.889239,
+            "high_quality_liquid_assets": 20502.96964,
+            "net_cash_outflows_30d": 15478.09121,
+            "total_deposits": 126700.5967,
+            "number_of_employees": 2493,
+            "total_equity": 5852.220015,
+            "tier1_capital": 4690.394235,
+            "tier2_capital": 1088.552484,
+            "risk_weighted_assets": 97713.45453,
+            "operating_expenses": 1780.676482,
+            "operating_income": 3096.357366,
+            "net_income": 1315.680884,
+            "bank_type": "medium",
+            "stability": "medium",
+            "region": "central",
+            "loan_growth_rate": 0.254363651,
+            "asset_growth_rate": 0.263824912,
+            "deposit_growth_rate": 0.249831374,
+            "capital_adequacy_ratio": 0.059141771,
+            "npl_ratio": 0.016836295,
+            "liquidity_coverage_ratio": 1.324644581,
+            "loan_to_deposit_ratio": 0.774047687,
+            "return_on_assets": 0.009649067,
+            "return_on_equity": 0.224817399,
+            "provision_coverage_ratio": 0.760570549,
+            "sector_loans_energy": 9597.303619,
+            "sector_loans_real_estate": 66324.24384,
+            "sector_loans_construction": 4267.29992,
+            "sector_loans_services": 2951.293778,
+            "sector_loans_agriculture": 14932.16269,
+            "top1_borrower_loans": 7313.478803,
+            "top10_borrower_loans": 27967.55146,
+            "obs_exposure_total": 57888.27274,
+            "external_credit_rating": "BBB",
+            "nsfr": 1.14796382,
+            "wholesale_funding_short_term": 19048.24734,
+            "wholesale_funding_stable": 22124.25839,
+            "loan_to_total_funding_ratio": 0.65897799,
+            "wholesale_dependency_ratio": 0.245259694,
+            "interest_income": 2031.581401,
+            "interest_expense": 1136.883894,
+            "net_interest_margin": 0.015,
+            "derivatives_notional": 140196.3527,
+            "unused_credit_lines": 63076.7713,
+            "guarantees_issued": 24175.08682,
+            "derivatives_to_assets_ratio": 1.028185543,
+            "unused_lines_to_loans_ratio": 0.643165999,
+            "guarantees_to_loans_ratio": 0.246502691,
+            "obs_to_assets_ratio": 0.424546602,
+            "top20_depositors": 43984.09455,
+            "top20_depositors_ratio": 0.347149861,
+            "top5_depositors": 23113.2974,
+            "top5_depositors_ratio": 0.182424535,
+            "sector_concentration_hhi": 0.49291078,
+            "top20_borrower_loans": 52932.38937,
+            "top20_borrower_concentration": 0.539728214,
+            "geographic_concentration": 1.0,
+            "liquidity_concentration_risk": 0.313741166,
+            "credit_concentration_risk": 0.608373854,
+            "obs_risk_indicator": 0.406768717
+          },
+          "explanation": {
+            "top_factors": [
+              {
+                "feature": "asset_growth_rate",
+                "value": 0.263824912,
+                "peer_mean": 0.06669905845000001,
+                "peer_median": 0.062198814500000005,
+                "z_score": 2.349485887398409,
+                "pct_deviation": 295.5451817925924,
+                "severity": "notable"
+              },
+              {
+                "feature": "deposit_growth_rate",
+                "value": 0.249831374,
+                "peer_mean": 0.06782833795,
+                "peer_median": 0.062681133,
+                "z_score": 2.1769312856977407,
+                "pct_deviation": 268.32890433518287,
+                "severity": "notable"
+              },
+              {
+                "feature": "loan_growth_rate",
+                "value": 0.254363651,
+                "peer_mean": 0.06771590415,
+                "peer_median": 0.060082436,
+                "z_score": 2.1345443126639085,
+                "pct_deviation": 275.63354457551014,
+                "severity": "notable"
+              },
+              {
+                "feature": "obs_to_assets_ratio",
+                "value": 0.424546602,
+                "peer_mean": 0.3074419794642857,
+                "peer_median": 0.306456449,
+                "z_score": 2.0715308038356532,
+                "pct_deviation": 38.08999107401267,
+                "severity": "notable"
+              }
+            ],
+            "narrative": "Models flagging anomaly: isolation_forest, dbscan (consensus: 66.7%). Key outliers identified: Asset Growth Rate: 0.2638 vs peer average 0.0667 (above by 295.5%, z-score: 2.35); Deposit Growth Rate: 0.2498 vs peer average 0.0678 (above by 268.3%, z-score: 2.18); Loan Growth Rate: 0.2544 vs peer average 0.0677 (above by 275.6%, z-score: 2.13).",
+            "model_consensus": {
+              "models_flagging": [
+                "isolation_forest",
+                "dbscan"
+              ],
+              "consensus_strength": 0.6666666666666666
+            },
+            "deviation_details": {
+              "asset_growth_rate": {
+                "feature": "asset_growth_rate",
+                "value": 0.263824912,
+                "peer_mean": 0.06669905845000001,
+                "peer_median": 0.062198814500000005,
+                "z_score": 2.349485887398409,
+                "pct_deviation": 295.5451817925924,
+                "severity": "notable"
+              },
+              "deposit_growth_rate": {
+                "feature": "deposit_growth_rate",
+                "value": 0.249831374,
+                "peer_mean": 0.06782833795,
+                "peer_median": 0.062681133,
+                "z_score": 2.1769312856977407,
+                "pct_deviation": 268.32890433518287,
+                "severity": "notable"
+              },
+              "loan_growth_rate": {
+                "feature": "loan_growth_rate",
+                "value": 0.254363651,
+                "peer_mean": 0.06771590415,
+                "peer_median": 0.060082436,
+                "z_score": 2.1345443126639085,
+                "pct_deviation": 275.63354457551014,
+                "severity": "notable"
+              },
+              "obs_to_assets_ratio": {
+                "feature": "obs_to_assets_ratio",
+                "value": 0.424546602,
+                "peer_mean": 0.3074419794642857,
+                "peer_median": 0.306456449,
+                "z_score": 2.0715308038356532,
+                "pct_deviation": 38.08999107401267,
+                "severity": "notable"
+              }
+            },
+            "peer_group": 0
+          },
+          "contributing_factors": [
+            {
+              "feature": "asset_growth_rate",
+              "value": 0.263824912,
+              "peer_mean": 0.06669905845000001,
+              "peer_median": 0.062198814500000005,
+              "z_score": 2.349485887398409,
+              "pct_deviation": 295.5451817925924,
+              "severity": "notable"
+            },
+            {
+              "feature": "deposit_growth_rate",
+              "value": 0.249831374,
+              "peer_mean": 0.06782833795,
+              "peer_median": 0.062681133,
+              "z_score": 2.1769312856977407,
+              "pct_deviation": 268.32890433518287,
+              "severity": "notable"
+            },
+            {
+              "feature": "loan_growth_rate",
+              "value": 0.254363651,
+              "peer_mean": 0.06771590415,
+              "peer_median": 0.060082436,
+              "z_score": 2.1345443126639085,
+              "pct_deviation": 275.63354457551014,
+              "severity": "notable"
+            },
+            {
+              "feature": "obs_to_assets_ratio",
+              "value": 0.424546602,
+              "peer_mean": 0.3074419794642857,
+              "peer_median": 0.306456449,
+              "z_score": 2.0715308038356532,
+              "pct_deviation": 38.08999107401267,
+              "severity": "notable"
+            }
+          ],
+          "regulatory_narrative": "Models flagging anomaly: isolation_forest, dbscan (consensus: 66.7%). Key outliers identified: Asset Growth Rate: 0.2638 vs peer average 0.0667 (above by 295.5%, z-score: 2.35); Deposit Growth Rate: 0.2498 vs peer average 0.0678 (above by 268.3%, z-score: 2.18); Loan Growth Rate: 0.2544 vs peer average 0.0677 (above by 275.6%, z-score: 2.13)."
+        },
+        {
+          "index": 19,
+          "anomaly_score": 0.6666666666666666,
+          "severity": "MEDIUM",
+          "red_flag_count": 0,
+          "models_voting_anomaly": 2,
+          "data": {
+            "bank_id": "TCB",
+            "period": "12/31/2022",
+            "total_assets": 175256.1114,
+            "total_loans": 121737.7279,
+            "non_performing_loans": 2608.535665,
+            "loan_loss_provisions": 1491.420726,
+            "loan_loss_reserves": 2282.359682,
+            "high_quality_liquid_assets": 26893.11847,
+            "net_cash_outflows_30d": 19449.93433,
+            "total_deposits": 157750.4265,
+            "number_of_employees": 3714,
+            "total_equity": 5435.817489,
+            "tier1_capital": 4297.313625,
+            "tier2_capital": 1023.170285,
+            "risk_weighted_assets": 118034.4739,
+            "operating_expenses": 2712.697188,
+            "operating_income": 4507.503284,
+            "net_income": 1794.806096,
+            "bank_type": "medium",
+            "stability": "medium",
+            "region": "central",
+            "loan_growth_rate": 0.079300414,
+            "asset_growth_rate": 0.113161049,
+            "deposit_growth_rate": 0.104478936,
+            "capital_adequacy_ratio": 0.045075678,
+            "npl_ratio": 0.021427504,
+            "liquidity_coverage_ratio": 1.382684282,
+            "loan_to_deposit_ratio": 0.771710928,
+            "return_on_assets": 0.010241047,
+            "return_on_equity": 0.330181449,
+            "provision_coverage_ratio": 0.571746343,
+            "sector_loans_energy": 11913.18946,
+            "sector_loans_real_estate": 82328.6742,
+            "sector_loans_construction": 5297.024504,
+            "sector_loans_services": 3663.458335,
+            "sector_loans_agriculture": 18535.38143,
+            "top1_borrower_loans": 9078.264279,
+            "top10_borrower_loans": 34716.28622,
+            "obs_exposure_total": 59480.5054,
+            "external_credit_rating": "BBB",
+            "nsfr": 1.14796382,
+            "wholesale_funding_short_term": 23672.79966,
+            "wholesale_funding_stable": 27495.60771,
+            "loan_to_total_funding_ratio": 0.657167796,
+            "wholesale_dependency_ratio": 0.244920032,
+            "interest_income": 3180.079239,
+            "interest_expense": 1654.904599,
+            "net_interest_margin": 0.015,
+            "derivatives_notional": 213195.7841,
+            "unused_credit_lines": 54188.51434,
+            "guarantees_issued": 27158.07377,
+            "derivatives_to_assets_ratio": 1.216481311,
+            "unused_lines_to_loans_ratio": 0.445125067,
+            "guarantees_to_loans_ratio": 0.223086748,
+            "obs_to_assets_ratio": 0.339391904,
+            "top20_depositors": 43873.11718,
+            "top20_depositors_ratio": 0.278117265,
+            "top5_depositors": 16492.03568,
+            "top5_depositors_ratio": 0.10454511,
+            "sector_concentration_hhi": 0.49291078,
+            "top20_borrower_loans": 56384.13803,
+            "top20_borrower_concentration": 0.463160755,
+            "geographic_concentration": 1.0,
+            "liquidity_concentration_risk": 0.277320273,
+            "credit_concentration_risk": 0.585403617,
+            "obs_risk_indicator": 0.370223596
+          },
+          "explanation": {
+            "top_factors": [
+              {
+                "feature": "total_deposits",
+                "value": 157750.4265,
+                "peer_mean": 57326.861112357146,
+                "peer_median": 51095.7399,
+                "z_score": 2.8694980110904975,
+                "pct_deviation": 175.17715681453203,
+                "severity": "notable"
+              },
+              {
+                "feature": "total_loans",
+                "value": 121737.7279,
+                "peer_mean": 44883.26735314285,
+                "peer_median": 39594.803025,
+                "z_score": 2.8555728666633162,
+                "pct_deviation": 171.23187566128826,
+                "severity": "notable"
+              },
+              {
+                "feature": "number_of_employees",
+                "value": 3714.0,
+                "peer_mean": 1469.2714285714285,
+                "peer_median": 1289.5,
+                "z_score": 2.5973187793692865,
+                "pct_deviation": 152.77834495230874,
+                "severity": "notable"
+              },
+              {
+                "feature": "total_assets",
+                "value": 175256.1114,
+                "peer_mean": 73554.15322928573,
+                "peer_median": 65412.094965,
+                "z_score": 2.3292357897423375,
+                "pct_deviation": 138.26813810728694,
+                "severity": "notable"
+              },
+              {
+                "feature": "top5_depositors_ratio",
+                "value": 0.10454511,
+                "peer_mean": 0.2130894979785714,
+                "peer_median": 0.21448288399999998,
+                "z_score": -2.099133554442809,
+                "pct_deviation": -50.93840335082436,
+                "severity": "notable"
+              }
+            ],
+            "narrative": "Models flagging anomaly: dbscan, elliptic_envelope (consensus: 66.7%). Key outliers identified: Total Deposits: 157750.4265 vs peer average 57326.8611 (above by 175.2%, z-score: 2.87); Total Loans: 121737.7279 vs peer average 44883.2674 (above by 171.2%, z-score: 2.86); Number Of Employees: 3714.0000 vs peer average 1469.2714 (above by 152.8%, z-score: 2.60).",
+            "model_consensus": {
+              "models_flagging": [
+                "dbscan",
+                "elliptic_envelope"
+              ],
+              "consensus_strength": 0.6666666666666666
+            },
+            "deviation_details": {
+              "total_deposits": {
+                "feature": "total_deposits",
+                "value": 157750.4265,
+                "peer_mean": 57326.861112357146,
+                "peer_median": 51095.7399,
+                "z_score": 2.8694980110904975,
+                "pct_deviation": 175.17715681453203,
+                "severity": "notable"
+              },
+              "total_loans": {
+                "feature": "total_loans",
+                "value": 121737.7279,
+                "peer_mean": 44883.26735314285,
+                "peer_median": 39594.803025,
+                "z_score": 2.8555728666633162,
+                "pct_deviation": 171.23187566128826,
+                "severity": "notable"
+              },
+              "number_of_employees": {
+                "feature": "number_of_employees",
+                "value": 3714.0,
+                "peer_mean": 1469.2714285714285,
+                "peer_median": 1289.5,
+                "z_score": 2.5973187793692865,
+                "pct_deviation": 152.77834495230874,
+                "severity": "notable"
+              },
+              "total_assets": {
+                "feature": "total_assets",
+                "value": 175256.1114,
+                "peer_mean": 73554.15322928573,
+                "peer_median": 65412.094965,
+                "z_score": 2.3292357897423375,
+                "pct_deviation": 138.26813810728694,
+                "severity": "notable"
+              },
+              "top5_depositors_ratio": {
+                "feature": "top5_depositors_ratio",
+                "value": 0.10454511,
+                "peer_mean": 0.2130894979785714,
+                "peer_median": 0.21448288399999998,
+                "z_score": -2.099133554442809,
+                "pct_deviation": -50.93840335082436,
+                "severity": "notable"
+              },
+              "top20_depositors_ratio": {
+                "feature": "top20_depositors_ratio",
+                "value": 0.278117265,
+                "peer_mean": 0.4648553843785714,
+                "peer_median": 0.477126667,
+                "z_score": -2.0953774618748002,
+                "pct_deviation": -40.17122865602749,
+                "severity": "notable"
+              }
+            },
+            "peer_group": 0
+          },
+          "contributing_factors": [
+            {
+              "feature": "total_deposits",
+              "value": 157750.4265,
+              "peer_mean": 57326.861112357146,
+              "peer_median": 51095.7399,
+              "z_score": 2.8694980110904975,
+              "pct_deviation": 175.17715681453203,
+              "severity": "notable"
+            },
+            {
+              "feature": "total_loans",
+              "value": 121737.7279,
+              "peer_mean": 44883.26735314285,
+              "peer_median": 39594.803025,
+              "z_score": 2.8555728666633162,
+              "pct_deviation": 171.23187566128826,
+              "severity": "notable"
+            },
+            {
+              "feature": "number_of_employees",
+              "value": 3714.0,
+              "peer_mean": 1469.2714285714285,
+              "peer_median": 1289.5,
+              "z_score": 2.5973187793692865,
+              "pct_deviation": 152.77834495230874,
+              "severity": "notable"
+            },
+            {
+              "feature": "total_assets",
+              "value": 175256.1114,
+              "peer_mean": 73554.15322928573,
+              "peer_median": 65412.094965,
+              "z_score": 2.3292357897423375,
+              "pct_deviation": 138.26813810728694,
+              "severity": "notable"
+            },
+            {
+              "feature": "top5_depositors_ratio",
+              "value": 0.10454511,
+              "peer_mean": 0.2130894979785714,
+              "peer_median": 0.21448288399999998,
+              "z_score": -2.099133554442809,
+              "pct_deviation": -50.93840335082436,
+              "severity": "notable"
+            }
+          ],
+          "regulatory_narrative": "Models flagging anomaly: dbscan, elliptic_envelope (consensus: 66.7%). Key outliers identified: Total Deposits: 157750.4265 vs peer average 57326.8611 (above by 175.2%, z-score: 2.87); Total Loans: 121737.7279 vs peer average 44883.2674 (above by 171.2%, z-score: 2.86); Number Of Employees: 3714.0000 vs peer average 1469.2714 (above by 152.8%, z-score: 2.60)."
+        }
+      ],
+      "severity_distribution": {
+        "MEDIUM": 2
+      },
+      "explained_anomalies": [
+        {
+          "index": 17,
+          "severity": "MEDIUM",
+          "score": 0.6666666666666666,
+          "regulatory_narrative": "Models flagging anomaly: isolation_forest, dbscan (consensus: 66.7%). Key outliers identified: Asset Growth Rate: 0.2638 vs peer average 0.0667 (above by 295.5%, z-score: 2.35); Deposit Growth Rate: 0.2498 vs peer average 0.0678 (above by 268.3%, z-score: 2.18); Loan Growth Rate: 0.2544 vs peer average 0.0677 (above by 275.6%, z-score: 2.13).",
+          "top_factors": [
+            {
+              "feature": "asset_growth_rate",
+              "value": 0.263824912,
+              "peer_mean": 0.06669905845000001,
+              "peer_median": 0.062198814500000005,
+              "z_score": 2.349485887398409,
+              "pct_deviation": 295.5451817925924,
+              "severity": "notable"
+            },
+            {
+              "feature": "deposit_growth_rate",
+              "value": 0.249831374,
+              "peer_mean": 0.06782833795,
+              "peer_median": 0.062681133,
+              "z_score": 2.1769312856977407,
+              "pct_deviation": 268.32890433518287,
+              "severity": "notable"
+            },
+            {
+              "feature": "loan_growth_rate",
+              "value": 0.254363651,
+              "peer_mean": 0.06771590415,
+              "peer_median": 0.060082436,
+              "z_score": 2.1345443126639085,
+              "pct_deviation": 275.63354457551014,
+              "severity": "notable"
+            },
+            {
+              "feature": "obs_to_assets_ratio",
+              "value": 0.424546602,
+              "peer_mean": 0.3074419794642857,
+              "peer_median": 0.306456449,
+              "z_score": 2.0715308038356532,
+              "pct_deviation": 38.08999107401267,
+              "severity": "notable"
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "severity": "MEDIUM",
+          "score": 0.6666666666666666,
+          "regulatory_narrative": "Models flagging anomaly: dbscan, elliptic_envelope (consensus: 66.7%). Key outliers identified: Total Deposits: 157750.4265 vs peer average 57326.8611 (above by 175.2%, z-score: 2.87); Total Loans: 121737.7279 vs peer average 44883.2674 (above by 171.2%, z-score: 2.86); Number Of Employees: 3714.0000 vs peer average 1469.2714 (above by 152.8%, z-score: 2.60).",
+          "top_factors": [
+            {
+              "feature": "total_deposits",
+              "value": 157750.4265,
+              "peer_mean": 57326.861112357146,
+              "peer_median": 51095.7399,
+              "z_score": 2.8694980110904975,
+              "pct_deviation": 175.17715681453203,
+              "severity": "notable"
+            },
+            {
+              "feature": "total_loans",
+              "value": 121737.7279,
+              "peer_mean": 44883.26735314285,
+              "peer_median": 39594.803025,
+              "z_score": 2.8555728666633162,
+              "pct_deviation": 171.23187566128826,
+              "severity": "notable"
+            },
+            {
+              "feature": "number_of_employees",
+              "value": 3714.0,
+              "peer_mean": 1469.2714285714285,
+              "peer_median": 1289.5,
+              "z_score": 2.5973187793692865,
+              "pct_deviation": 152.77834495230874,
+              "severity": "notable"
+            },
+            {
+              "feature": "total_assets",
+              "value": 175256.1114,
+              "peer_mean": 73554.15322928573,
+              "peer_median": 65412.094965,
+              "z_score": 2.3292357897423375,
+              "pct_deviation": 138.26813810728694,
+              "severity": "notable"
+            },
+            {
+              "feature": "top5_depositors_ratio",
+              "value": 0.10454511,
+              "peer_mean": 0.2130894979785714,
+              "peer_median": 0.21448288399999998,
+              "z_score": -2.099133554442809,
+              "pct_deviation": -50.93840335082436,
+              "severity": "notable"
+            }
+          ]
+        }
+      ]
     }
   },
   "time_series_analysis": {
@@ -70,74 +611,74 @@
     }
   ],
   "overall_risk_score": {
-    "overall_score": 27.67156689063297,
-    "base_score": 27.67156689063297,
-    "risk_level": "MINIMAL",
+    "overall_score": 35.71651322527307,
+    "base_score": 35.71651322527307,
+    "risk_level": "LOW",
     "early_warning": {
       "count": 0,
       "adjustment": 0.0,
       "applied": false
     },
     "component_scores": {
-      "credit": 7.768733167298333,
-      "liquidity": 70.18306749632468,
-      "anomaly": 0.0
+      "credit": 8.090005715684764,
+      "liquidity": 85.65860268285475,
+      "anomaly": 10.0
     }
   },
   "expert_rules_violations": [
     {
       "rule": "Capital Adequacy",
       "metric": "capital_adequacy_ratio",
-      "value": 0.045075677766089374,
+      "value": 0.0501664671751319,
       "threshold": 0.105,
       "severity": "CRITICAL",
-      "message": "CAR (4.51%) below minimum requirement (10.50%)"
+      "message": "CAR (5.02%) below minimum requirement (10.50%)"
     }
   ],
   "high_risk_periods": [
     {
-      "period": "2022-03-31",
+      "period": "12/31/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.02405058840981142,
-      "liquidity_ratio": 0.1576480149697127,
-      "capital_adequacy_ratio": 0.07627062916228149
+      "npl_ratio": 0.021427504110662805,
+      "liquidity_ratio": 0.1704788954722731,
+      "capital_adequacy_ratio": 0.045075677759258435
     },
     {
-      "period": "2022-06-30",
+      "period": "3/31/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.016836294705201486,
-      "liquidity_ratio": 0.16182220267898811,
-      "capital_adequacy_ratio": 0.05914177067297622
+      "npl_ratio": 0.024050588409131643,
+      "liquidity_ratio": 0.15764801498789938,
+      "capital_adequacy_ratio": 0.076270629165977
     },
     {
-      "period": "2022-09-30",
+      "period": "6/30/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.018728887130411157,
-      "liquidity_ratio": 0.15493553778666516,
-      "capital_adequacy_ratio": 0.05016646717557021
+      "npl_ratio": 0.016836294704827615,
+      "liquidity_ratio": 0.16182220268896336,
+      "capital_adequacy_ratio": 0.05914177066808897
     },
     {
-      "period": "2022-12-31",
+      "period": "9/30/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.021427504106864566,
-      "liquidity_ratio": 0.17047889553258277,
-      "capital_adequacy_ratio": 0.045075677766089374
+      "npl_ratio": 0.018728887140296198,
+      "liquidity_ratio": 0.15493553782653485,
+      "capital_adequacy_ratio": 0.0501664671751319
     }
   ]
 }

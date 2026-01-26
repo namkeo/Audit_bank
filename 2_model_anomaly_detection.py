@@ -593,6 +593,8 @@ class AnomalyDetectionModel:
         # Count expert red flags (columns starting with flag_)
         flag_cols = [c for c in features.columns if c.startswith('flag_')]
         flag_counts = features[flag_cols].sum(axis=1) if flag_cols else pd.Series(0, index=features.index)
+        # If no flag columns exist, do not block anomalies on red-flag threshold
+        effective_min_red_flags = 0 if not flag_cols else min_red_flags
 
         # Scale features - convert to numpy to avoid sklearn feature name validation issues
         X_scaled = self.scaler.transform(features.values)
@@ -647,7 +649,7 @@ class AnomalyDetectionModel:
             n_models = len(anomaly_scores_array)
             
             # Identify anomalies based on voting threshold AND minimum red flags
-            is_anomaly = (ensemble_scores >= voting_threshold) & (flag_counts >= min_red_flags)
+            is_anomaly = (ensemble_scores >= voting_threshold) & (flag_counts >= effective_min_red_flags)
             
             # Store results
             self.anomaly_scores = {

@@ -1,25 +1,27 @@
 {
   "bank_name": "EIB Bank",
   "audit_period": "2024",
-  "report_date": "2026-01-16T17:03:40.147728",
+  "report_date": "2026-01-26T15:19:25.886749",
   "executive_summary": {
-    "overall_status": "LOW_RISK",
+    "overall_status": "HIGH_RISK",
     "key_findings": [],
-    "critical_issues": [],
+    "critical_issues": [
+      "High liquidity risk detected (Score: 78.7)"
+    ],
     "strengths": [
-      "Strong credit quality (Score: 7.3)"
+      "Strong credit quality (Score: 7.2)"
     ]
   },
   "risk_assessments": {
     "credit_risk": {
-      "risk_score": 7.280944115578784,
+      "risk_score": 7.237493564656436,
       "risk_level": "MINIMAL",
       "indicators": {},
       "key_metrics": [],
-      "regulatory_narrative": "Credit Risk Assessment: CRITICAL (score: 7.28). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+      "regulatory_narrative": "Credit Risk Assessment: CRITICAL (score: 7.24). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
       "ml_explanation": {
         "key_factors": [],
-        "narrative": "Credit Risk Assessment: CRITICAL (score: 7.28). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
+        "narrative": "Credit Risk Assessment: CRITICAL (score: 7.24). Models flagging elevated risk: isolation_forest, elliptic_envelope.",
         "model_insights": {
           "isolation_forest": {
             "verdict": "ANOMALY DETECTED"
@@ -32,14 +34,14 @@
       }
     },
     "liquidity_risk": {
-      "risk_score": 67.69463830920442,
-      "risk_level": "HIGH",
+      "risk_score": 78.70455364561845,
+      "risk_level": "CRITICAL",
       "indicators": {},
       "key_metrics": [],
-      "regulatory_narrative": "Liquidity Risk Assessment: CRITICAL (score: 67.69). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+      "regulatory_narrative": "Liquidity Risk Assessment: CRITICAL (score: 78.70). ML models detected liquidity stress patterns (stress probability: 100.0%).",
       "ml_explanation": {
         "key_factors": [],
-        "narrative": "Liquidity Risk Assessment: CRITICAL (score: 67.69). ML models detected liquidity stress patterns (stress probability: 100.0%).",
+        "narrative": "Liquidity Risk Assessment: CRITICAL (score: 78.70). ML models detected liquidity stress patterns (stress probability: 100.0%).",
         "stress_indicators": {
           "ml_stress_detected": true,
           "stress_probability": 1.0
@@ -60,25 +62,25 @@
   },
   "recommendations": [
     {
-      "priority": "LOW",
-      "category": "General",
-      "description": "Continue monitoring key risk indicators",
-      "action": "Maintain current risk management practices",
-      "timeline": "Ongoing"
+      "priority": "HIGH",
+      "category": "Liquidity Risk",
+      "description": "Liquidity position requires immediate attention",
+      "action": "Increase liquid assets and reduce loan-to-deposit ratio",
+      "timeline": "Immediate"
     }
   ],
   "overall_risk_score": {
-    "overall_score": 26.605501054453057,
-    "base_score": 26.605501054453057,
-    "risk_level": "MINIMAL",
+    "overall_score": 30.441591201829027,
+    "base_score": 30.441591201829027,
+    "risk_level": "LOW",
     "early_warning": {
       "count": 0,
       "adjustment": 0.0,
       "applied": false
     },
     "component_scores": {
-      "credit": 7.280944115578784,
-      "liquidity": 67.69463830920442,
+      "credit": 7.237493564656436,
+      "liquidity": 78.70455364561845,
       "anomaly": 0.0
     }
   },
@@ -86,56 +88,56 @@
     {
       "rule": "Capital Adequacy",
       "metric": "capital_adequacy_ratio",
-      "value": 0.04305739864762704,
+      "value": 0.04684757100728544,
       "threshold": 0.105,
       "severity": "CRITICAL",
-      "message": "CAR (4.31%) below minimum requirement (10.50%)"
+      "message": "CAR (4.68%) below minimum requirement (10.50%)"
     }
   ],
   "high_risk_periods": [
     {
-      "period": "2022-03-31",
+      "period": "12/31/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.020223994600371914,
-      "liquidity_ratio": 0.1549033798994138,
-      "capital_adequacy_ratio": 0.06978759306200459
+      "npl_ratio": 0.024058349230684263,
+      "liquidity_ratio": 0.17620046912408233,
+      "capital_adequacy_ratio": 0.04305739865728766
     },
     {
-      "period": "2022-06-30",
+      "period": "3/31/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.01637721174474175,
-      "liquidity_ratio": 0.16631505702572633,
-      "capital_adequacy_ratio": 0.06197774205542974
+      "npl_ratio": 0.020223994596476537,
+      "liquidity_ratio": 0.15490337990872446,
+      "capital_adequacy_ratio": 0.0697875930566005
     },
     {
-      "period": "2022-09-30",
+      "period": "6/30/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.023137628050608008,
-      "liquidity_ratio": 0.17940235234600702,
-      "capital_adequacy_ratio": 0.04684757101837892
+      "npl_ratio": 0.016377211744227092,
+      "liquidity_ratio": 0.166315057020105,
+      "capital_adequacy_ratio": 0.06197774205870664
     },
     {
-      "period": "2022-12-31",
+      "period": "9/30/2022",
       "risk_indicators": [
         "Low Liquidity",
         "Low Capital"
       ],
       "severity": "HIGH",
-      "npl_ratio": 0.024058349219807446,
-      "liquidity_ratio": 0.17620046913067552,
-      "capital_adequacy_ratio": 0.04305739864762704
+      "npl_ratio": 0.023137628040046883,
+      "liquidity_ratio": 0.17940235239158334,
+      "capital_adequacy_ratio": 0.04684757100728544
     }
   ]
 }
